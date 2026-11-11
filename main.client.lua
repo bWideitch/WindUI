@@ -1364,3 +1364,13 @@ dropdownA = Tabs.ExampleTab:Dropdown({
 	Value = { "All" },
 	Callback = function(option) end,
 })
+
+-- New paragraphs
+do
+    local ptab = WindUI:Tab({Title = "Paragraphs Tab"})
+	ptab:Paragraph({
+		Title = "hi",
+		RichText = true,
+		Desc = "Hi Hello <b>Hi Hello</b>"
+	})
+end
