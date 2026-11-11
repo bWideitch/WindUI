@@ -138,6 +138,7 @@ return function(Config)
 			BackgroundTransparency = 1,
 			Text = Title or "",
 			TextSize = Type == "Desc" and 15 or 17,
+			RichText = false,
 			TextXAlignment = "Left",
 			ThemeTag = {
 				TextColor3 = not Element.Color and ("Element" .. Type) or nil,
