@@ -17,6 +17,7 @@ function Element:New(ElementConfig)
 		Desc = ElementConfig.Desc or nil,
 		--Color = ElementConfig.Color,
 		Locked = ElementConfig.Locked or false,
+		RichText = ElementConfig.RichText or false,
 	}
 	local Paragraph = require("../components/window/Element")(ElementConfig)
 
