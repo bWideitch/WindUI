@@ -4,7 +4,7 @@ local Creator = require("../../modules/Creator")
 local New = Creator.New
 local Tween = Creator.Tween
 
-function Label.New(Text, Icon, Parent, IsPlaceholder, Radius, RemoveGlass)
+function Label.New(Text, Icon, Parent, IsPlaceholder, Radius, RemoveGlass, RichText)
 	local Radius = Radius or 10
 	local IconLabelFrame
 	local IconData = Creator.Icon(Icon)
@@ -31,6 +31,7 @@ function Label.New(Text, Icon, Parent, IsPlaceholder, Radius, RemoveGlass)
 			TextColor3 = IsPlaceholder and "Placeholder" or "Text",
 		},
 		Text = Text,
+		RichText = RichText or false,
 	})
 
 	local LabelFrame = New("TextButton", {
