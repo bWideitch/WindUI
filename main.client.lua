@@ -1367,7 +1367,7 @@ dropdownA = Tabs.ExampleTab:Dropdown({
 
 -- New paragraphs
 do
-    local ptab = WindUI:Tab({Title = "Paragraphs Tab"})
+    local ptab = Window:Tab({Title = "Paragraphs Tab"})
 	ptab:Paragraph({
 		Title = "hi",
 		RichText = true,
