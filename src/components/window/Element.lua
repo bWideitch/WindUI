@@ -129,7 +129,7 @@ return function(Config)
 		IconOffset = ImageSize
 	end
 
-	local function CreateText(Title, Type)
+	local function CreateText(Title, Type, RichText)
 		local TextColor = typeof(Element.Color) == "string"
 				and GetTextColorForHSB(Color3.fromHex(Creator.Colors[Element.Color]))
 			or typeof(Element.Color) == "Color3" and GetTextColorForHSB(Element.Color)
@@ -138,7 +138,7 @@ return function(Config)
 			BackgroundTransparency = 1,
 			Text = Title or "",
 			TextSize = Type == "Desc" and 15 or 17,
-			RichText = false,
+			RichText = Type == "Desc" and RichText or false,
 			TextXAlignment = "Left",
 			ThemeTag = {
 				TextColor3 = not Element.Color and ("Element" .. Type) or nil,
